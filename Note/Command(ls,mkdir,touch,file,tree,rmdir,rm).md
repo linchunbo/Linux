@@ -87,3 +87,31 @@ rmdir -p aa/cc
 rm -rf aa
 强制删除 aa，如果aa是文件夹，则会递归删除aa下面的所有文件，即删除aa所有
 ```
+
+###复制
+```
+cp [选项] ../path1/xx /path2/yy
+如果yy为文件夹，则拷贝 path1下面的xx到 yy里面
+如果yy不是文件夹，则拷贝 xx 到 path2下面，并且命名为yy
+
+cp -rf path1 path2
+将 path1内容 完全复制到 path2里面
+
+cp -rfp path1 paht2
+将 path1内容和属性信息都 完全的复制到 path2里面
+
+cp -u path1/aa path2/aa
+如果 path1/aa 比 path2/aa新，则复制覆盖，否则不执行
+
+cp aa bb
+无论aa是不是快捷方式，拷贝的bb也不是快捷方式
+
+cp -b aa bb
+如果aa为快捷方式，拷贝的bb也是快捷方式
+```
+
+###剪切(跟cp一样)
+```
+mv [选项] path1/aa path2/bb
+如果 bb为文件夹，剪切过去， 如果bb不是文件夹，则剪切过来，重命名为bb
+```
