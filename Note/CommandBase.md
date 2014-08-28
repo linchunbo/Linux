@@ -140,3 +140,33 @@ echo $PATH
 PATH= 复制PATH然后后面添加 "：/home/walter"
 将/home/walter 这个路径加入到命令执行的默认路径 = 之后不用打./来执行当前的命令
 ```
+
+###查看命令的默认格式
+```
+alias rm
+查看rm 命令的 完整格式 => rm -i
+```
+
+###查看文件名
+```
+basename path/aa
+查看aa的文件名        => aa
+```
+
+###查看文件路径
+```
+dirname path/aa
+查看aa的文件路径      => path  
+```
+
+###查找命令的路径
+```
+which passwd
+查找passwd命令在哪个路径下 	=> /user/bin/passwd
+```
+
+###获取命令结果
+```
+echo " xx `hostname` xx "
+这里重点的是2个反引号		=> xx www.walter.cc xx
+```
