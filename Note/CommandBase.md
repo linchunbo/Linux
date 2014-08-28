@@ -226,3 +226,9 @@ find -newer file1
 find -perm 222
 在当前的路径下查找 权限为222的文件
 ```
+
+###查看磁盘信息
+```
+dumpe2fs /dev/sda3
+查看磁盘sda3分区的信息
+```
