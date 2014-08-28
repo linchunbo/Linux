@@ -170,3 +170,59 @@ which passwd
 echo " xx `hostname` xx "
 这里重点的是2个反引号		=> xx www.walter.cc xx
 ```
+
+###查找命令的路径2
+```
+whereis ls
+查找与ls有关的所有路径
+
+whereis -b ls
+仅查看命令路径
+
+whereis -m ls
+仅查看帮助文档路径
+```
+
+###查找命令3
+```
+locate walter
+查找所有与walter有关的路径，不一定用来查找命令
+```
+
+###查找文件
+```
+find 目录 -属性 值 
+		属性：	name			文件名
+				size			文件大小
+				user			所有者
+				group			所有组
+				uid				用户id
+				ctime			创建时间 天
+				cmin		   	创建时间	分
+				newer			创建时间	新
+				perm			文件权限
+
+find / -name walter
+从根目录开始查找文件名为walter的所有文件
+
+find / -user walter -group walter
+从根目录开始查找 所有者和所有族都为walter的文件 
+
+find / -name walter or -group walter
+从根目录开始查找 所有者为walter 或者 所有族为walter的文件
+
+find -size 4M
+当前路径下查找 大小为4M的文件
+
+find -size +2M -size -5M
+当前路径下查找 大小大于2M 小于5M的文件
+
+find -ctime +1
+在当前路径下查找 创建日期大于1天的文件
+
+find -newer file1
+在当前路径下查找 比file1要新的文件
+
+find -perm 222
+在当前的路径下查找 权限为222的文件
+```
