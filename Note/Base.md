@@ -112,3 +112,7 @@ t		(SBIT只能用于other)该文件除了所有者和root之外，其余的人�
 				4		u+s
 ```
 
+###中文乱码
+```
+vi/etc/sysconfig/i18n将内容改为LANG="zh_CN.GB18030"LANGUAGE="zh_CN.GB18030:zh_CN.GB2312:zh_CN"SUPPORTED="zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en"SYSFONT="lat0-sun16"重新登录。
+```

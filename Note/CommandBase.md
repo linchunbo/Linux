@@ -232,3 +232,8 @@ find -perm 222
 dumpe2fs /dev/sda3
 查看磁盘sda3分区的信息
 ```
+
+###查看系统支持那些编码
+```
+locale -a
+```
